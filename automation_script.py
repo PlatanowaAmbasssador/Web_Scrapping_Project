@@ -36,8 +36,8 @@ class CarLeasingScraper:
 
         service_chrome = Service(executable_path=chromepath) 
         options_chrome = webdriver.ChromeOptions()
+        options_chrome.add_argument("--headless")  # Run Chrome in headless mode
         driver = webdriver.Chrome(service=service_chrome, options=options_chrome)  # opens Chrome
-        driver.maximize_window()  # maximizes browser's window
         driver.get(self.website_url)  # opens a website
         return driver
 
