@@ -36,8 +36,8 @@ class CarLeasingScraper:
 
         service_chrome = Service(executable_path=chromepath) 
         options_chrome = webdriver.ChromeOptions()
-        options_chrome.add_argument("--headless")  # Run Chrome in headless mode
         driver = webdriver.Chrome(service=service_chrome, options=options_chrome)  # opens Chrome
+        driver.maximize_window()  # maximizes browser's window
         driver.get(self.website_url)  # opens a website
         return driver
 
@@ -106,8 +106,8 @@ class CarLeasingScraper:
 
     def access_links_and_collect_data(self):
         df_page_links = pd.read_pickle(f'Outputs/{self.stan}/df_page_links.pkl')
+        
         data = []
-
         for i, link in enumerate(df_page_links['Links']):
             webpage_html = requests.get(link)  # request for a webpage structure
             soup = BeautifulSoup(webpage_html.text, 'html.parser')  # one need to format it into a BeautifulSoup object before proceeding
