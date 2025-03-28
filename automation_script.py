@@ -102,10 +102,10 @@ class CarLeasingScraper:
                 time.sleep(10)
 
         df_page_links = pd.DataFrame([(page_number, link) for page_number, links in page_links.items() for link in links], columns=['Page Number', 'Links'])
-        df_page_links.to_pickle('Outputs/df_page_links.pkl')
+        df_page_links.to_pickle(f'Outputs/{self.stan}/df_page_links.pkl')
 
     def access_links_and_collect_data(self):
-        df_page_links = pd.read_pickle('Outputs/df_page_links.pkl')
+        df_page_links = pd.read_pickle(f'Outputs/{self.stan}/df_page_links.pkl')
         data = []
 
         for i, link in enumerate(df_page_links['Links']):
@@ -187,4 +187,4 @@ class CarLeasingScraper:
 
         # Create a DataFrame from the collected data
         df_car_scrapped_data = pd.DataFrame(data)
-        df_car_scrapped_data.to_pickle('Outputs/df_car_scrapped_data.pkl')
+        df_car_scrapped_data.to_pickle(f'Outputs/{self.stan}/df_car_scrapped_data.pkl')
