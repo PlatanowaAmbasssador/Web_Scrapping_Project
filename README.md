@@ -9,14 +9,14 @@ This project involves web scraping car data from a Polish car marketplace and pe
 ├── 01_scrap_uzywane_static.ipynb       # Initial static scraping notebook
 ├── 02_zbieranie_linkow.ipynb           # Link collection notebook
 ├── 03_Executor.ipynb                   # Main execution notebook
-├── 04_Data_Analysis.ipynb
-├── 05_Car_data_EDA.ipynb               # EDA
+├── 04_Data_Analysis.ipynb              # Initial data analysis
+├── 05_Car_data_EDA.ipynb               # Comprehensive EDA
 ├── automation_script.py                # Automated scraping script
-├── single_offer_static_scraping.ipynb  # Alternative way (different code) for scraping information from one signle car offer 
+├── single_offer_static_scraping.ipynb  # Alternative way (different code) for scraping information from one single car offer 
 ├── Outputs/                            # Data storage directory
 │   ├── df_page_links.pkl               # Collected page links
-│   └── df_car_scrapped_data.pkl        # Scraped car data
-|   └── df_combined.pkl                 # Cleaned dataset with new and used cars
+│   ├── df_car_scrapped_data.pkl        # Scraped car data
+│   └── df_combined.pkl                 # Cleaned dataset with new and used cars
 ├── README.md                           # Project documentation
 └── requirements.txt                    # Python dependencies
 ```
@@ -28,6 +28,7 @@ This project involves web scraping car data from a Polish car marketplace and pe
 - Comprehensive Exploratory Data Analysis using Plotly
 - Price prediction using machine learning models
 - Interactive visualizations and insights
+- Support for both new and used car data analysis
 
 ## Project Components
 
@@ -48,19 +49,30 @@ This project involves web scraping car data from a Polish car marketplace and pe
   - Rate limiting and polite scraping practices
   - Data validation and cleaning
 
+- **Alternative Scraping Method** (`single_offer_static_scraping.ipynb`)
+  - Alternative implementation for single offer scraping
+  - Different approach to data extraction
+  - Useful for testing and validation
+
 ### 2. Data Processing and Analysis
 - **Main Execution** (`03_Executor.ipynb`)
   - Orchestrates the scraping process
   - Manages data flow between components
   - Handles execution logging and monitoring
 
-- **Data Analysis** (`04_Data_Analysis.ipynb`)
-  - Comprehensive EDA
+- **Initial Data Analysis** (`04_Data_Analysis.ipynb`)
+  - Basic data exploration
+  - Initial insights generation
+  - Data quality assessment
+
+- **Comprehensive EDA** (`05_Car_data_EDA.ipynb`)
+  - Detailed exploratory data analysis
   - Price distribution analysis
   - Brand and model analysis
   - Feature correlation studies
   - Machine learning model development
   - Model performance evaluation
+  - Combined analysis of new and used cars
 
 ## Technical Requirements
 - Python 3.10+
@@ -94,7 +106,8 @@ This project involves web scraping car data from a Polish car marketplace and pe
 1. Start with `01_scrap_uzywane_static.ipynb` to understand the basic scraping structure
 2. Run `02_zbieranie_linkow.ipynb` to collect all car listing links
 3. Use `03_Executor.ipynb` to run the automated scraping process
-4. Analyze the data using `04_Data_Analysis.ipynb`
+4. Perform initial analysis using `04_Data_Analysis.ipynb`
+5. Conduct comprehensive analysis using `05_Car_data_EDA.ipynb`
 
 ## Output
 The project generates:
@@ -104,9 +117,11 @@ The project generates:
 - Feature correlation analysis
 - Price prediction models with performance metrics
 - Detailed insights and findings
+- Combined analysis of new and used car markets
 
 ## Notes
 - The scraping process includes rate limiting to be respectful to the target website
 - All data is stored in the `Outputs` directory
-- The analysis notebook includes detailed visualizations and insights
+- The analysis notebooks include detailed visualizations and insights
 - The project follows best practices for web scraping and data analysis
+- Multiple scraping approaches are available for flexibility and validation
