@@ -6,18 +6,19 @@ This project involves web scraping car data from a Polish car marketplace and pe
 ## Project Structure
 ```
 .
-├── 01_scrap_uzywane_static.ipynb    # Initial static scraping notebook
-├── 02_zbieranie_linkow.ipynb        # Link collection notebook
-├── 03_Executor.ipynb                # Main execution notebook
+├── 01_scrap_uzywane_static.ipynb       # Initial static scraping notebook
+├── 02_zbieranie_linkow.ipynb           # Link collection notebook
+├── 03_Executor.ipynb                   # Main execution notebook
 ├── 04_Data_Analysis.ipynb
-├── 05_Car_data_EDA.ipynb            # EDA
-├── automation_script.py             # Automated scraping script
-├── Outputs/                         # Data storage directory
-│   ├── df_page_links.pkl            # Collected page links
-│   └── df_car_scrapped_data.pkl     # Scraped car data
-|   └── df_combined.pkl              # Cleaned dataset with new and used cars
-├── README.md                        # Project documentation
-└── requirements.txt                 # Python dependencies
+├── 05_Car_data_EDA.ipynb               # EDA
+├── automation_script.py                # Automated scraping script
+├── single_offer_static_scraping.ipynb  # Alternative way (different code) for scraping information from one signle car offer 
+├── Outputs/                            # Data storage directory
+│   ├── df_page_links.pkl               # Collected page links
+│   └── df_car_scrapped_data.pkl        # Scraped car data
+|   └── df_combined.pkl                 # Cleaned dataset with new and used cars
+├── README.md                           # Project documentation
+└── requirements.txt                    # Python dependencies
 ```
 
 ## Features
